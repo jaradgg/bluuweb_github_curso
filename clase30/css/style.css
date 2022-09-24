@@ -35,4 +35,8 @@
         text-align: center;
         flex-grow: 1; /* hago que los elementos en el contenedor ocupen todo el ancho */
         flex-shrink: 0; /* obligo a que no se restrinjan los anchos establecidos */
+        /* como alternativa a las dos líneas anteriores usamos
+        flex: 1 0 auto; */
+        order: 2 /* ordena los elementos */
+        
     }
