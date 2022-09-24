@@ -13,10 +13,20 @@
     margin: 50px auto;
     display: flex; /* ya podemos usar flexbox */
     flex-direction: row; /* filas ordenadas de derecha a izquierda */ 
+    /* flex-direction: column;  /* coloca los elementos en columnas */
+    flex-wrap: wrap; /* para que respete los anchos (width) establecidos, sino se achican 
+                        para que entren todos en la misma fila, lo contrario es nowrap */
+    justify-content: space-around; /* los objetos se alinean dentro de una fila 
+                                      al inicio, flex-end, estaran al final
+                                      no los invierte como flex-direction: row */
+    /* justify-content: flex-center; /* deja los elementos al centro del contenedor */
+    align-items: center; /* alinea los elementos de manera vertical sobre el contenedor padre
+                            con align strech ocupamos todo el alto del espacio del contenedor
+                            no debemos definir el alto (height) */
 }
     .hijo {
         background: #00b285;
-        width: 200px;
+        width: 200px; /* ancho establecido para los objetos */
         height: 100px;
         color: #fff;
         margin: 30px;
