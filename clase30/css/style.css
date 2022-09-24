@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 80%;
+    height: 500px;
+    background: #FF5C29;
+    margin: 50px auto;
+    display: flex; /* ya podemos usar flexbox */
+    flex-direction: row; /* filas ordenadas de derecha a izquierda */ 
+    /* flex-direction: column;  /* coloca los elementos en columnas */
+    flex-wrap: wrap; /* para que respete los anchos (width) establecidos, sino se achican 
+                        para que entren todos en la misma fila, lo contrario es nowrap */
+    justify-content: space-around; /* los objetos se alinean dentro de una fila 
+                                      al inicio, flex-end, estaran al final
+                                      no los invierte como flex-direction: row */
+    /* justify-content: flex-center; /* deja los elementos al centro del contenedor */
+    align-items: center; /* alinea los elementos de manera vertical sobre el contenedor padre
+                            con align strech ocupamos todo el alto del espacio del contenedor
+                            no debemos definir el alto (height) */
+}
+    .hijo {
+        background: #00b285;
+        width: 200px; /* ancho establecido para los objetos */
+        height: 100px;
+        color: #fff;
+        margin: 30px;
+        padding: 20px;
+        font-size: 40px;
+        text-align: center;
+        flex-grow: 1; /* hago que los elementos en el contenedor ocupen todo el ancho */
+        flex-shrink: 0; /* obligo a que no se restrinjan los anchos establecidos */
+    }
